@@ -62,16 +62,18 @@ function game() {
     for (let i = 1; i < 6; i++) {
         let playerSelect = prompt("What weapon do you choose?");
         playerSelect = playerSelect.toLowerCase();
-            /*if (playerSelect !== "paper" || playerSelect !== "rock" || playerSelect !== "scissors"){
-                alert("You choose a bad weapon! Take somethink like this:");
-                alert("rock,paper or scissors!");
-                alert("Good luck next time!");
-            }
-            else {*/
-                console.log("Round: " + i);
-                playRound(playerSelect,getComputerChoice());
-                console.log("Current score is: player score - " + playerScore + ", computer score - " + computerScore);
-            //}*/    
+        console.log("Round: " + i);
+        playRound(playerSelect,getComputerChoice());
+        console.log("Current score is: player score - " + playerScore + ", computer score - " + computerScore);
+        /* checking the validity of the variable entered by the user - need to think how to make 5 round even when user put 5 times wrong words.  
+        if (!(playerSelect === "paper" || playerSelect === "rock" || playerSelect === "scissors")){
+            alert("You choose a bad weapon! Take somethink like this: rock,paper or scissors! Good luck next time!");
+        }
+        else {
+            console.log("Round: " + i);
+            playRound(playerSelect,getComputerChoice());
+            console.log("Current score is: player score - " + playerScore + ", computer score - " + computerScore);
+        }*/   
     }
     if (playerScore > computerScore) {
         console.log("You win!");
